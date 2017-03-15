@@ -1,233 +1,177 @@
-//Do not change any of the function names
+    //Do not change any of the function names
 
-function multiplyByTen(num) {
-  //return num after multiplying it by ten
-  //code here #1
-  var product = num * 10;
-  return product;
+function getBiggest(x, y) {
+  //x and y are integers.  Return the larger integer
+  //if they are the same return either one
+  if (x >= y) {
+    return x;
+  } 
+  else {
+    return y;
+  }
 }
 
-function subtractFive(num) {
-  //return num after subtracting five
-  //code here #2
-  var total = num - 5;
-  return total;
+function greeting(language) {
+  //return a greeting for three different languages:
+  //language: 'German' -> 'Guten Tag!'
+  //language: 'English' -> 'Hello!'
+  //language: 'Spanish' -> 'Hola!'
+  //if language is undefined return 'Hello!'
+  if (language = 'German') {
+    return 'Guten Tag!';
+  }
+  else if (language = 'English') {
+    return 'Hello!';
+  }
+  else if (language = 'Spanish') {
+    return 'Hola!';
+  }
+  else {
+    return 'Hello!';
+  }
 }
 
-function areSameLength(str1, str2) {
-  //return true if the two strings have the same length
+function isTenOrFive(num) {
+  //return true if num is 10 or 5
   //otherwise return false
-  //code here #3
-  var stringLength1 = str1.length;
-  var stringLength2 = str2.length;
-  if (stringLength1 === stringLength2) {
+  if (num === 5 || num === 10) {
     return true;
   }
-  return false;
+  else {
+    return false;
+  }
 }
 
-function areEqual(x, y) {
-  //return true if x and y are the same
-  //otherwise return false
-  //code here #4
-  if (x === y) {
+function isInRange(num) {
+  //return true if num is less than 50 and greater than 20
+  if (num > 20 && num < 50) {
     return true;
   }
-  return false;
-}
-
-function lessThanNinety(num) {
-  //return true if num is less than ninety
-  //otherwise return false
-  //code here #5
-  if (num < 90) {
-    return true;
+  else {
+    return false;
   }
-  return false;
 }
 
-function greaterThanFifty(num) {
-  //return true if num is greater than fifty
+function isInteger(num) {
+  //return true if num is an integer
+  //0.8 -> false
+  //1 -> true
+  //-10 -> true
   //otherwise return false
-  //code here #6
-  if (num > 50) {
+  //hint: you can solve this using Math.floor
+  var floor = Math.floor(num);
+  if (num - floor === 0) {
     return true;
+  } 
+  else {
+    return false;
   }
-  return false;
 }
 
-function add(x, y) {
-  //add x and y together and return the value
-  //code here #7
-  var sum = x + y;
-  return sum;
+function fizzBuzz(num) {
+  //if num is divisible by 3 return 'fizz'
+  //if num is divisible by 5 return 'buzz'
+  //if num is divisible by 3 & 5 return 'fizzbuzz'
+  //otherwise return num
+  if (num / 3 === 0) {
+    return 'fizz';
+  }
+  else if (num / 5 === 0) {
+    return 'buzz';
+  }
+  else if (num / 3 === 0 && num / 5 === 0) {
+    return 'fizzbuzz';
+  }
+  else {
+    return num;
+  }
 }
 
-function subtract(x, y) {
-  //subtract y from x and return the value
-  //code here #8
-  var sum = x - y; 
-  return sum;
-}
-
-function divide(x, y) {
-  //divide x by y and return the value
-  //code here #9
-  var sum = x / y; 
-  return sum;
-}
-
-function multiply(x, y) {
-  //multiply x by y and return the value
-  //code here #10
-  var sum = x * y; 
-  return sum; 
-}
-
-function getRemainder(x, y) {
-  //return the remainder from dividing x by y
-  //code here #11
-  var remainder = x % y; 
-  return remainder;
-}
-
-function isEven(num) {
-  //return true if num is even
+function isPrime(num) {
+  //return true if num is prime.
   //otherwise return false
-  //code here #12
-  if (num % 2 === 0) {
-    return true;
-  }
-  return false;
+  //hint: a prime number is only evenly divisible by itself and 1
+  //hint2: you can solve this using a for loop
+  //note: 0 and 1 are NOT considered prime numbers
+  
 }
 
-function isOdd(num) {
-  //return true if num is false
-  //otherwise return false
-  //code here #13
-  if (num % 2 !== 0) {
-    return true;
-  }
-  return false;
+function returnFirst(arr) {
+  //return the first item from the array
 }
 
-function square(num) {
-  //square num and return the new value
-  //code here #14
-  var sum = Math.pow (num, 2);
-  return sum;
+function returnLast(arr) {
+  //return the last item of the array
 }
 
-function cube(num) {
-  //cube num and return the new value
-  //code here #15
-  var sum = Math.pow (num, 3);
-  return sum;
+function getArrayLength(arr) {
+  //return the length of the array
 }
 
-function raiseToPower(num, exponent) {
-  //raise num to whatever power is passed in as exponent
-  //code here #16
-  var sum = Math.pow (num, exponent);
-  return sum;
+function incrementByOne(arr) {
+  //arr is an array of integers  
+  //increase each integer by one
+  //return the array
 }
 
-function roundNumber(num) {
-  //round num and return it
-  //code here #17
-  var sum = Math.round(num);
-  return sum;
+function addItemToArray(arr, item) {
+  //add the item to the end of the array
+  //return the array
 }
 
-function roundUp(num) {
-  //round num up and return it
-  //code here #18
-  var sum = Math.ceil(num);
-  return sum;
+function addItemToFront(arr, item) {
+  //add the item to the front of the array
+  //return the array
+  //hint: use the array method .unshift
 }
 
-function addExclamationPoint(str) {
-  //add an exclamation point to the end of str and return the new string
-  //'hello world' -> 'hello world!'
-  //code here #19
-  var strongFinish = (str + '!');
-  return strongFinish;
+function wordsToSentence(words) {
+  //words is an array of strings
+  //return a string that is all of the words concatenated together
+  //spaces need to be between each word
+  //example: ['Hello', 'world!'] -> 'Hello world!'
 }
 
-function combineNames(firstName, lastName) {
-  //return firstName and lastName combined as one string and separated by a space.
-  //'Lambda', 'School' -> 'Lambda School'
-  //code here #20
-  var fullName = (firstName + ' ' + lastName);
-  return fullName;
+function contains(arr, item) {
+  //check to see if item is inside of arr
+  //return true if it is, otherwise return false
 }
 
-function getGreeting(name) {
-  //Take the name string and concatenate other strings onto it so it takes the following form:
-  //'Sam' -> 'Hello Sam!'
-  //code here #21
-  var greeting = ('Hello' + ' ' + name + '!');
-  return greeting;
+function addNumbers(numbers) {
+  //numbers is an array of integers.
+  //add all of the integers and return the value
 }
 
-//If you can't remember these area formulas then head over to Google or look at the test code.
- 
-function getRectangleArea(length, width) {
-  //return the area of the rectangle by using length and width
-  //code here #22
-  var area = (length * width); 
-  return area;
+function averageTestScore(testScores) {
+  //testScores is an array.  Iterate over testScores and compute the average.
+  //return the average
 }
 
-function getTriangleArea(base, height) {
-  //return the area of the triangle by using base and height
-  //code here #23
-  var area = (base * height) / 2;
-  return area;
-}
-
-function getCircleArea(radius) {
-  //return the rounded area of the circle given the radius
-  //code here #24
-  var area = Math.pow(radius, 2) * Math.PI; 
-  var roundArea = Math.round(area);
-  return roundArea;
-}
-
-function getRectangularPrismVolume(length, width, height) {
-  //return the area of the 3D rectangular prism given the length, width, and height
-  //code here #25
-  var area = (length * width * height);
-  return area;
+function largestNumber(numbers) {
+  //numbers is an array of integers
+  //return the largest integer
 }
 
 //Do not modify code below this line.
 ////--------------------------------
 
 module.exports = {
-  multiplyByTen: multiplyByTen,
-  subtractFive: subtractFive,
-  areSameLength: areSameLength,
-  areEqual: areEqual,
-  lessThanNinety: lessThanNinety,
-  greaterThanFifty: greaterThanFifty,
-  add: add,
-  subtract: subtract,
-  divide: divide,
-  multiply: multiply,
-  getRemainder: getRemainder,
-  isEven: isEven,
-  isOdd: isOdd,
-  square: square,
-  cube: cube,
-  raiseToPower: raiseToPower,
-  roundNumber: roundNumber,
-  roundUp: roundUp,
-  addExclamationPoint: addExclamationPoint,
-  combineNames: combineNames,
-  getGreeting: getGreeting,
-  getRectangleArea: getRectangleArea,
-  getTriangleArea: getTriangleArea,
-  getCircleArea: getCircleArea,
-  getRectangularPrismVolume: getRectangularPrismVolume
+  getBiggest: getBiggest,
+  greeting: greeting,
+  isTenOrFive: isTenOrFive,
+  isInRange: isInRange,
+  isInteger: isInteger,
+  fizzBuzz: fizzBuzz,
+  isPrime: isPrime,
+  returnFirst: returnFirst,
+  returnLast: returnLast,
+  getArrayLength: getArrayLength,
+  incrementByOne: incrementByOne,
+  addItemToArray: addItemToArray,
+  addItemToFront: addItemToFront,
+  wordsToSentence: wordsToSentence,
+  contains: contains,
+  addNumbers: addNumbers,
+  averageTestScore: averageTestScore,
+  largestNumber: largestNumber
 };
